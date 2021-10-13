@@ -1,0 +1,78 @@
+@import "/src/styles/index.scss";
+
+.wrapper {
+    .btnModalActive {
+        background-color: transparent;
+        background: #0e48fe;
+        border: 1px solid #0e48fe;
+        border-radius: 1.2rem;
+        padding: 1.2rem;
+        margin: 3rem;
+    
+        font-family: inherit;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .modal {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        pointer-events: none;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 250ms opacity ease-in;
+    
+        .modalContainer{
+            background-color: white;
+            width: 40rem;
+            padding: 1.5rem;
+            border-radius: 0.2rem;
+    
+            font-size: 1.5rem;
+    
+            h1 {
+                text-align: center;
+    
+            }
+    
+            p {
+                line-height: 2rem;
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray;
+                padding: 1.5rem 0;
+            }
+        }
+    
+        .modalButtons{
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+    
+            font-size: 1.5rem;
+    
+            .btnModalDeactive{
+                background: transparent;
+                color: #0e48fe;
+                padding: 0.5rem 0.8rem;
+                font-size: inherit;
+    
+                border: 1px solid #0e48fe;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+    
+    .modalVisible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
